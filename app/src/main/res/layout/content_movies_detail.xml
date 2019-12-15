@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.main.DetailsActivity.DetailActivity"
+    android:id="@+id/nested_scroll"
+    tools:showIn="@layout/activity_detail">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/watchIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_watch_time_white_24dp"/>
+
+                <TextView
+                    android:id="@+id/tv_watch_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02h 13min"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/watchIcon"
+                    android:layout_marginStart="8dp"/>
+
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/geners_chip_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_watch_time"
+                    app:singleLine="false"
+                    android:theme="@style/Theme.MaterialComponents">
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/ll"
+            android:text="Over View"
+            />
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/colorAccent"
+            android:text="this group will face a"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_add_watchlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tv_date"
+                android:text="Add to watchlist"
+                android:padding="6dp"
+                android:paddingEnd="12dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_watch_later24dp"
+                android:drawablePadding="8dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tv_rate_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate Movie"
+                android:background="@drawable/bg_tv_mark_fav"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:padding="6dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="2dp"
+                android:drawableStart="@drawable/ic_star_white_24dp"
+                android:drawablePadding="8dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorAccent"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Related"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:ems="4"
+                style="@style/about_text_style"/>
+
+            <TextView
+                android:id="@+id/tv_about_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/about_text_value_style"
+                android:textStyle="bold"
+                android:text="release"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Production"
+                android:ems="4"
+                style="@style/about_text_style"/>
+
+            <TextView
+                android:id="@+id/tv_about_production"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/about_text_value_style"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:text="production countries"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Companies"
+                android:ems="4"
+                style="@style/about_text_style"/>
+
+            <TextView
+                android:id="@+id/tv_about_companies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/about_text_value_style"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:text="production companies production companies production companies"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tagline"
+                android:ems="4"
+                style="@style/about_text_style"/>
+
+            <TextView
+                android:id="@+id/tv_about_tagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/about_text_value_style"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:text="production companies  "/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_fav_image"
+        android:layout_width="80dp"
+        android:layout_height="115dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_image"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/tv_fav_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:text="this is title"/>
+
+        <TextView
+            android:id="@+id/tv_rd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release Date"
+            android:ems="6"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:layout_below="@id/tv_fav_title"/>
+
+        <TextView
+            android:id="@+id/tv_fav_realease_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_rd"
+            android:layout_below="@id/tv_fav_title"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:text="22-10 2019"/>
+
+        <TextView
+            android:id="@+id/tv_p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popularity"
+            android:ems="6"
+            android:layout_below="@id/tv_fav_realease_date"
+            style="@style/RowFavTextStyle"/>
+
+        <TextView
+            android:id="@+id/tv_popularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="323.32"
+            android:layout_below="@id/tv_fav_realease_date"
+            android:layout_toEndOf="@id/tv_p"
+            style="@style/RowFavTextStyle"/>
+
+        <TextView
+            android:id="@+id/tv_vc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_p"
+            android:text="Vote count"
+            android:ems="6"
+            style="@style/RowFavTextStyle"/>
+
+        <TextView
+            android:id="@+id/tv_vote_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_popularity"
+            android:layout_toEndOf="@id/tv_vc"
+            android:text="234"
+            style="@style/RowFavTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:ems="6"
+            android:layout_below="@id/tv_vc"
+            style="@style/RowFavTextStyle"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/fav_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_r"
+            android:layout_below="@id/tv_vote_count"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:progressTint="@color/colorAccent"
+            android:stepSize="0.25"
+            app:layout_collapseMode="parallax" />
+
+    </RelativeLayout>
+
+</LinearLayout>

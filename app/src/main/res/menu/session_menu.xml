@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/account_session"
+        android:icon="@drawable/ic_account_white_24dp"
+        android:title="Make Session"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/delete_session"
+        android:title="Delete Session"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/fav_movies"
+        android:title="Favourite Movies"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/watch_list"
+        android:title="Watch List"
+        app:showAsAction="never" />
+</menu>

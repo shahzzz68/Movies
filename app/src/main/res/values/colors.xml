@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#151c25</color>
+    <color name="colorPrimaryDark">#151c25</color>
+    <color name="colorAccent">#f1b814</color>
+    <color name="dateText">#80FFC314</color>
+    <color name="transparentYellow">#80FFC314</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="gradien_center">#CE151C25</color>
+</resources>
